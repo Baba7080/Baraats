@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block titlee %}
+Contact
+{% endblock titlee %}
+
+{% block body %}
+This is Contact page
+<div class="container-fluid">
+ <img src='https://source.unplash.com/1200x400/?phone,contact' class="d-block w-100 mx-0" alt='...'>
+</div>
+<div class="container">
+    <form method="post" action="/contact">
+    {% csrf_token %}
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault01">First name</label>
+      <input type="text" class="form-control" name="first_name" id="validationDefault01" value="" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault02">Last name</label>
+      <input type="text" class="form-control" name="last_name" id="validationDefault02" value="" required>
+    </div>
+      <div class="col-md-6 mb-3">
+      <label for="validationDefault0">E-mail</label>
+      <input type="text" class="form-control"name="Email" id="validationDefault0" value="" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">City</label>
+      <input type="text" class="form-control"name="city" id="validationDefault03" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault04">State</label>
+      <input type="text" class="form-control"name="state" id="validationDefault04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Zip</label>
+      <input type="text" class="form-control" name="pin" id="validationDefault05" required>
+    </div>
+
+
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+</div>
+{% endblock body %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block titlee %}
+service
+{% endblock titlee %}
+
+{% block body %}
+This is service page
+<div class="container">
+    <form method="post" action="/service">
+      {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control"name="Email" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control"name="option" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Describe Your Views</label>
+    <textarea class="form-control"name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+</div>
+{% endblock body %}

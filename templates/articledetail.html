@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<center><h1>Detail<br>{{post.title}}</h1></center>
+
+<img class= "rounded-circle article-img" src="{{ obeject.pst.url }}">
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top"  src="{{ user.profile.pst.url }}" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"><div class="media-body">
+      <h2 class="account-heading">{{object.username}}</h2>
+    </div>.</p>
+    </div>
+    </div>
+    <h1><p class="text-secondary">{{post.email}}</p>
+      <p class="text-secondary">{{post.City}}</p></h1>
+<br><small>By: {{object.auther}} - {{post.city}} </small>
+<br>
+{{object.body}}
+{% comment %} {{object.images}} {% endcomment %}
+{% comment %} <img class= "rounded-circle article-img" src="{{object.images}}"> {% endcomment %}
+
+{% endblock body %}
